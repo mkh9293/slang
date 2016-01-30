@@ -4,9 +4,9 @@ from __future__ import unicode_literals
 from django.db import models
 
 class Member(models.Model):
-    m_id = models.CharField(max_length=10,unique=True)
-    m_email = models.CharField(max_length=30,unique=True)
-    m_pass = models.CharField(max_length=60)
+    m_id = models.CharField(max_length=10, unique=True)
+    m_mail = models.EmailField
+    m_pass = models.CharField(max_length=10)
     
     def __str__(self):
         return self.m_id
