@@ -5,8 +5,8 @@ from django.db import models
 
 class Member(models.Model):
     m_id = models.CharField(max_length=10,unique=True)
-    m_email = models.EmailField.unique
-    m_pass = models.CharField
+    m_email = models.CharField(max_length=30,unique=True)
+    m_pass = models.CharField(max_length=60)
     
     def __str__(self):
         return self.m_id
